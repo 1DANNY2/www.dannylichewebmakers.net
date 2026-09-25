@@ -395,6 +395,16 @@
     <a href="cookie-policy.html">Cookie Policy</a>
   </p>
 </footer>
+  <script>
+  function acceptCookies() {
+    localStorage.setItem("cookiesAccepted", "true");
+    document.getElementById("cookie-banner").style.display = "none";
+  }
+
+  if (localStorage.getItem("cookiesAccepted") === "true") {
+    document.getElementById("cookie-banner").style.display = "none";
+  }
+</script>
 </body>
 </html>
 
